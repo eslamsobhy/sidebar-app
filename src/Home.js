@@ -7,11 +7,11 @@ const Home = () => {
   //  we just create a custom hook for it and import it
   // the custom hook is created at the context.js file
   // just for clean code purposes (DRY principle)
-  const { openModal } = useGlobalContext();
+  const { openModal, openSidebar } = useGlobalContext();
 
   return (
     <main>
-      <button className="sidebar-toggle">
+      <button className="sidebar-toggle" onClick={openSidebar}>
         <FaBars />
       </button>
       <button className="btn" onClick={openModal}>
